@@ -8,7 +8,8 @@ a forecast for `y[t]` before it is revealed. `t` runs from 2 through 1199;
 rounds 2–39 initialize the forecaster and are excluded from score.
 
 The synthetic target depends on its recent past and on a delayed, noisy
-exogenous channel. The relationship can change at 300-round boundaries. The
+exogenous channel. Its coefficients and three change points vary by episode;
+change points occur near the quarter-series boundaries. The
 environment does not disclose future `x`, future `y`, latent coefficients,
 episode seeds, or evaluator code. Hidden mean squared error (MSE) across all
 scored rounds is lower-is-better. Python 3.12 standard library; no network.
